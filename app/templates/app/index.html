@@ -34,33 +34,12 @@
         </div>
     </div>
 
-
-
-    <form method="post" enctype="multipart/form-data" action="{% url 'home' %}">
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <div style='margin-top: 20px;'>
-            <div class="button-container">
-                <input type="file" name="excel_files" accept=".xlsx, .xls" class='form-control'>
-            </div>
-            <div class="button-container">
-                <input type="file" name="excel_files" accept=".xlsx, .xls" class='form-control'>
-            </div>
-            <div class="button-container">
-                <input type="file" name="excel_files" accept=".xlsx, .xls" class='form-control'>
-            </div>
-            <div class="button-container">
-                <input type="file" name="excel_files" accept=".xlsx, .xls" class='form-control'>
-            </div>
-        </div>
-        <div class='button-container'>
-            <button type="submit" class="btn btn-dark">Merge</button>
-        </div>
+        <input type="file" name="file">
+        <br><br>
+        <button type="submit">Upload</button>
     </form>
-    {% if message %}
-    <div class="alert alert-danger mx-auto text-center fixed-bottom" role="alert">
-        {{message}}
-    </div>
-    {% endif %}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
